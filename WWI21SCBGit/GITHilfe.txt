@@ -1,0 +1,7 @@
+Pushen bedeutet, den geschriebenen Code auf den server hochladen.
+
+Die Commands sind:
+git pull            // Lädt die Updates von den anderen Usern des Git herunter.
+git add .           // Fügt alle vorgenommenen Änderungen für den Commit hinzu.
+git commit          // Bereitet den Push vor. Ermöglicht einen Kommentar zu dem Push hinzuzufügen.
+git push            // Lädt den Code hoch.
