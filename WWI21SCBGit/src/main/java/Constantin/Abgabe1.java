@@ -17,7 +17,7 @@ public class Abgabe1 {
         String Zahlen;
 
         System.out.println("Hallo und willkommen beim Passwort Generator von Constantin");
-        System.out.print("Bitte gebe ein wie lang das Passwort sein soll:");
+        System.out.print("Bitte gebe    ein wie lang das Passwort sein soll:");
         laenge = Scanner.nextInt();
         System.out.println(laenge);
         System.out.print("Sollen Zahlen verwendet werden?(j/n)");
