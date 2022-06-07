@@ -1,7 +1,5 @@
 package Constantin;
 
-
-import java.util.Random;
 import java.util.function.Consumer;
 import processing.core.PApplet;
 
@@ -35,7 +33,7 @@ import processing.core.PApplet;
         }
 
         private static boolean isValidAction(){
-            return(System.currentTimeMillis() > (lastTime + 1000));
+            return(System.currentTimeMillis() > (lastTime + 500));
         }
     }
 
@@ -149,7 +147,6 @@ import processing.core.PApplet;
             }
         }
 
-
         class GuiButton {
             Consumer<Object> onClick;
             float posX, posY;
@@ -180,7 +177,6 @@ import processing.core.PApplet;
                 if (parent.mousePressed == true && isPosInRect(parent.mouseX, parent.mouseY)) {
                     if (onClick != null) {
                         onClick.accept(this);
-
                     }
                 }
             }
