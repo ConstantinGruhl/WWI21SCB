@@ -7,7 +7,6 @@ import processing.core.PApplet;
         private static long lastTime = 0;
         public static boolean change;
         public static boolean dropdown;
-        public static boolean firework;
         public static boolean sliderboolean = false;
 
         public static void Change(){
