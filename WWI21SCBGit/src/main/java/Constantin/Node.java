@@ -62,5 +62,6 @@ class Uebung {
 
 		System.out.println(node1.getWert());
 		System.out.println(node1.getNext().getWert());
+		System.out.println(node2.getPrevious().getWert());
 	}
 }
