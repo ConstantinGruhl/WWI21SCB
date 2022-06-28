@@ -1,6 +1,5 @@
 package Constantin;
 
-import java.lang.invoke.SwitchPoint;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 import processing.core.PApplet;
@@ -26,44 +25,44 @@ class Point{
 }
 
 
-class SwitchPaint{
+class SwitchPaint {
     private static long lastTime = 0;
     public static boolean change;
-    public static boolean sliderGreenboolean= false;
+    public static boolean sliderGreenboolean = false;
     public static boolean sliderBlueboolean = false;
     public static boolean sliderRedboolean = false;
     public static boolean sliderThiccboolean = false;
 
-    public static boolean SliderGreenHasBeenPressed(){
+    public static boolean SliderGreenHasBeenPressed() {
         return sliderGreenboolean;
     }
-    public static boolean SliderBlueHasBeenPressed(){return sliderBlueboolean;}
-    public static boolean SliderRedHasBeenPressed(){return sliderRedboolean;}
-    public static boolean SliderThiccHasBeenPressed(){
+
+    public static boolean SliderBlueHasBeenPressed() {
+        return sliderBlueboolean;
+    }
+
+    public static boolean SliderRedHasBeenPressed() {
+        return sliderRedboolean;
+    }
+
+    public static boolean SliderThiccHasBeenPressed() {
         return sliderThiccboolean;
     }
 
-    public static void setGreenSliderboolean(){
+    public static void setGreenSliderboolean() {
         sliderGreenboolean = true;
     }
-    public static void setBlueSliderboolean(){sliderBlueboolean  = true; }
-    public static void setRedSliderboolean(){sliderRedboolean = true;}
-    public static void setThiccSliderboolean(){sliderThiccboolean = true;}
 
-    public static boolean isValidAction(){
-        return(System.currentTimeMillis()%1000==0);
-    }
-}
-
-class PaintCount{
-    public long counter = 0;
-
-    public long getCounter(){
-        return counter;
+    public static void setBlueSliderboolean() {
+        sliderBlueboolean = true;
     }
 
-    public void increase(){
-        counter++;
+    public static void setRedSliderboolean() {
+        sliderRedboolean = true;
+    }
+
+    public static void setThiccSliderboolean() {
+        sliderThiccboolean = true;
     }
 
 }
@@ -72,7 +71,6 @@ public class Paint extends PApplet {
 
     ArrayList<Point> Leinwand = new ArrayList<Point>();
 
-    public boolean button;
     GuiButton button2;
     GuiButton sliderBlue;
     GuiButton sliderGreen;
@@ -85,10 +83,7 @@ public class Paint extends PApplet {
     private int sliderPosGreen;
     private int sliderPosRed;
     private int sliderPosThicc;
-    private boolean isPressed = false;
 
-    private int xPos = 150;
-    private int yPos = 600;
 
     public static void main(String[] args) {
         PApplet.main("Constantin.Paint");
@@ -151,7 +146,7 @@ public class Paint extends PApplet {
             fill(0, sliderPosGreen, 0);
             circle(sliderPosGreen, 200, 50);
         }
-         if (SwitchPaint.SliderRedHasBeenPressed()) {
+        if (SwitchPaint.SliderRedHasBeenPressed()) {
             fill(sliderPosRed, 0, 0);
             circle(sliderPosRed, 300, 50);
         }else {
