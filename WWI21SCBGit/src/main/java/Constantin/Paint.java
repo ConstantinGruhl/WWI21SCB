@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.function.Consumer;
 import processing.core.PApplet;
 
-
 class Point{
     public int r;
     public int g;
@@ -12,7 +11,6 @@ class Point{
     public int size;
     public int x;
     public int y;
-
 
     public Point(int r, int g, int b, int size, int x, int y) {
         this.r = r;
@@ -26,8 +24,6 @@ class Point{
 
 
 class SwitchPaint {
-    private static long lastTime = 0;
-    public static boolean change;
     public static boolean sliderGreenboolean = false;
     public static boolean sliderBlueboolean = false;
     public static boolean sliderRedboolean = false;
@@ -38,12 +34,10 @@ class SwitchPaint {
     }
 
     public static boolean SliderBlueHasBeenPressed() {
-        return sliderBlueboolean;
-    }
+        return sliderBlueboolean;}
 
     public static boolean SliderRedHasBeenPressed() {
-        return sliderRedboolean;
-    }
+        return sliderRedboolean;}
 
     public static boolean SliderThiccHasBeenPressed() {
         return sliderThiccboolean;
@@ -54,16 +48,13 @@ class SwitchPaint {
     }
 
     public static void setBlueSliderboolean() {
-        sliderBlueboolean = true;
-    }
+        sliderBlueboolean = true;}
 
     public static void setRedSliderboolean() {
-        sliderRedboolean = true;
-    }
+        sliderRedboolean = true;}
 
     public static void setThiccSliderboolean() {
-        sliderThiccboolean = true;
-    }
+        sliderThiccboolean = true;}
 
 }
 
@@ -125,14 +116,8 @@ public class Paint extends PApplet {
 
         for (Point point : Leinwand) {
             fill(point.r, point.g, point.b);
-            strokeWeight(0);
-            stroke(point.r, point.g, point.b);
+            noStroke();
             circle(point.x, point.y, point.size);
-        }
-
-        if (SwitchPaint.change) {
-            fill(204, 200, 0);
-            circle(100, 100, 50);
         }
 
         if (mouseX>400){

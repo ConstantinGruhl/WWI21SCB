@@ -28,5 +28,9 @@
     <orderEntry type="library" name="core" level="project" />
     <orderEntry type="library" name="gluegen-rt" level="project" />
     <orderEntry type="library" name="jogl-all" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.12.3" level="project" />
+    <orderEntry type="library" name="jackson-core-2.12.3" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.12.3" level="project" />
+    <orderEntry type="library" name="jackson-datatype-guava-2.12.3" level="project" />
   </component>
 </module>
